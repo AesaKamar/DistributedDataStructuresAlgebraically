@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html manifest="Distributed%20Data%20Structures%20Algebraicly.hyperesources/cache.manifest">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Distributed Data Structures Algebraeically </title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#212121;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+
+	<meta name="viewport" content="user-scalable=yes, width=1240" />
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin' rel='stylesheet' type='text/css'>
+
+	<script src="https://cdn.jsdelivr.net/gh/worldoptimizer/HypeBlendModes/HypeBlendModes.min.js"></script>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<style>
+	   .scrollencourager {cursor: pointer !important;}
+	   .iframeAlmostFull {height: 100% !important; width: 90% !important;}
+	</style>
+
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+
+	<div id="distributeddatastructuresalgebraicly_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:100%;overflow:hidden;">
+		<noscript>
+			<img src="Distributed%20Data%20Structures%20Algebraicly.hyperesources/poster.jpg" width="100%" height="100%">
+		</noscript>
+		<script type="text/javascript" charset="utf-8" src="Distributed%20Data%20Structures%20Algebraicly.hyperesources/distributeddatastructuresalgebraicly_hype_generated_script.js?8927"></script>
+	</div>
+
+	<!-- end copy -->
+	
+
+
+	<!-- text content for search engines: -->
+
+	<div style="display:none" aria-hidden=true>
+
+		<div>Aesa Kamar</div>
+		<div>Distributed Data Structures:
+
+
+Algebraically </div>
+		<div></div>
+		<div>Any external node cannot own the state of this node
+
+
+An external node can only send a message to ask this node to modify its state
+</div>
+		<div>This is a node
+A node has a location
+
+A node owns some state
+
+
+
+
+</div>
+		<div>UnisonShareNew Article: Spark-like distributed datasets in under 100 lines of UnisonCheck it out!Publish on Unison Shareunison.distributedDownload latest version
+Namespaces and Definitions
+AtomicabilityAtomicChange perspective to Atomic
+BinarytypeBinaryChange perspective to Binary
+BoxtypeBoxChange perspective to Box
+ChanneltypeChannelChange perspective to Channel
+ChannelsabilityChannelsChange perspective to Channels
+ClocktypeClockChange perspective to Clock
+DVartypeDVarChange perspective to DVar
+DaemonChange perspective to Daemon
+EbttypeEbtChange perspective to Ebt
+ExternalChange perspective to External
+HashtypeHashChange perspective to Hash
+HashedtypeHashedChange perspective to Hashed
+IndextypeIndexChange perspective to Index
+JournaltypeJournalChange perspective to Journal
+LocationtypeLocationChange perspective to Location
+Location0typeLocation0Change perspective to Location0
+LwwMaptypeLwwMapChange perspective to LwwMap
+ModetypeModeChange perspective to Mode
+NodeIdtypeNodeIdChange perspective to NodeId
+OptypeOpChange perspective to Op
+P2PtypeP2PChange perspective to P2P
+RVarChange perspective to RVar
+RangetypeRangeChange perspective to Range
+RbttypeRbtChange perspective to Rbt
+ReadmedocRemoteabilityRemoteChange perspective to Remote
+RetryertypeRetryerChange perspective to Retryer
+RoutertypeRouterChange perspective to Router
+RouterForwardResultChange perspective to RouterForwardResult
+ScratchabilityScratchChange perspective to Scratch
+SemispacetypeSemispaceChange perspective to Semispace
+SeqtypeSeqChange perspective to Seq
+ServerStateChange perspective to ServerState
+StorageabilityStorageChange perspective to Storage
+StorageProvidertypeStorageProviderChange perspective to StorageProvider
+TasktypeTaskChange perspective to Task
+TaskIdtypeTaskIdChange perspective to TaskId
+TimetypeTimeChange perspective to Time
+TimedChanneltypeTimedChannelChange perspective to TimedChannel
+UIDtypeUIDChange perspective to UID
+ValuetypeValueChange perspective to Value
+_archiveChange perspective to _archive
+attributesChange perspective to attributes
+b2Change perspective to b2
+docsChange perspective to docs
+errorChange perspective to error
+failureChange perspective to failure
+libChange perspective to lib
+metadataChange perspective to metadata
+p2pChange perspective to p2p
+PatchpatchserverChange perspective to server
+storageChange perspective to storage
+structuresChange perspective to structures
+taskChange perspective to task
+PatchpatchupChange perspective to up
+Unison websiteDocsLanguage ReferenceCommunityReport a bugKeyboard Shortcuts?Unison websiteDocsLanguage ReferenceCommunityReport a bugKeyboard Shortcuts
+?Find DefinitionRVar#fpf0v683bmgsr9qh0vntutq97pcuekbbqlokqpc11rpr53cf9vjffcl5i749fj4b1ihegh3j1r5dvis6lps564u1k87um4ef3oj6uv0
+fpf0v683Find within unison.website.articles.distributedDatasets.lib.distributedChange perspective to unison.website.articles.distributedDatasets.lib.distributed
+unison.website.articles.distributedDatasets.lib.distributed1unique type RVar a = RVar a (Channel (Msg a)) (Channel (Task ())) DaemonA mutable reference that can exist at multiple locations. The instance of aRVarat a location is called a "replica". Operations on each replica are fully linearized.Can be created viaRVar.neworRVar.fromChannel.RVar.new      : initialValue ->{Channels} RVar initialValuegetAt         : Location {Channels, g}
+                -> RVar a
+                ->{distributed.Remote} Task agetAtStamped  : Location {Channels, g}
+                -> RVar a
+                ->{distributed.Remote} Task (a, Nat)RVar.modifyAt : Location {Channels, g}
+                -> (a ->{distributed.Remote, Channels} a)
+                -> RVar a
+                ->{distributed.Remote} Task asetAt         : Location {Channels, g}
+                -> a
+                -> RVar a
+                ->{distributed.Remote} Task ()attachDaemon  : Daemon -> RVar a -> RVar aReplicas of aRVarare created just in time at locations targeted bygetAt,RVar.modifyAt,setAt,trySetAt,etc. To shut down a replica, usestopAt.Implementation notesThe implementation works by sending all operations to a message queue on each replica, which is processed by a single thread at that location. SeeMsgandimpl.daemonfor details.</div>
+		<div>Addressing the global state requires coordination
+</div>
+		<div>address : K
+
+
+state   : V
+</div>
+		<div>
+</div>
+		<div>The global state can be partitioned across multiple nodes at different locations
+</div>
+		<div>Introducing:
+
+</div>
+		<div>Replicate, skeptically
+🤔
+
+
+Accept new state in phases after acknowledgment
+🤝
+</div>
+		<div>   “consistency group"</div>
+		<div>Messages might have issues!
+  - Out-of-order 
+  - Lost 
+  - Repeated
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent
+   is commutative
+
+empty: a
+</div>
+		<div>"Oil painting of a hamster drinking tea outside”
+— monoidally
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent   is commutative
+
+empty: a
+</div>
+		<div>
+</div>
+		<div>Finally! Some Algebra</div>
+		<div>combine: a -> a -> a
+   is associative
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+
+   is commutative
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+
+
+
+empty: a
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent
+   is commutative
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   
+   is commutative
+
+empty: a
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   
+  
+
+
+
+remove: a -> a -> a
+   is associative
+   
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent
+   is commutative
+
+empty: a
+
+
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   
+   is commutative
+
+empty: a
+
+remove: a -> a -> a
+   is associative
+   is commutative
+</div>
+		<div>Big idea: 
+
+- Keep track of last-seen event
+- Gossip to neighbors 
+</div>
+		<div>A primer: Vector Clocks
+</div>
+		<div>Vector Clocks form Semilattices ✨
+</div>
+		<div>combine: a -> a -> a
+   is associative
+   is idempotent
+   is commutative
+
+empty: a
+</div>
+		<div>Why are we doing this again? </div>
+		<div>Algebra keeps them tame
+
+</div>
+		<div>Distributed systems are wild
+
+</div>
+		<div>Thanks for listening!
+</div>
+		<div>We didn’t talk about
+“distributed concensus algorithms"
+</div>
+
+	</div>
+
+	<!-- end text content: -->
+
+  </body>
+</html>
